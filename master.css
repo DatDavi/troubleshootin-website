@@ -1,6 +1,9 @@
 body{
     animation: transitionIn 1s;
 }
+.imborder{
+    animation: rotation 5s linear infinite;
+}
 @keyframes transitionIn{
     from{
         opacity: 0;
@@ -12,4 +15,13 @@ body{
         filter: blur(0px);
         transform: translateY(0)
     }
+}
+@property --gradient-angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+@keyframes rotation{
+    from {--gradient-angle: 0deg;}
+    to {--gradient-angle: 360deg;}
 }
